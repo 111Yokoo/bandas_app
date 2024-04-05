@@ -15,7 +15,7 @@ function HomeStackScreen(){
         </Stack.Navigator>
     );
 }
-function MainTabScreen(){
+export default function Routes(){
     return(
         <Tab.Navigator screenOptions={{headerShown: false, tabBarShowLabel: false, tabBarActiveTintColor: "#fff", tabBarInactiveTintColor: "lightgray", tabBarStyle: {backgroundColor: "#212121"}}}>
             <Tab.Screen name="HomeStack" component={HomeStackScreen} options={{title: "Home", tabBarIcon: ({color}) => (<MaterialCommunityIcons name="home-variant" size={33} color={color}/>)}}/>
@@ -24,10 +24,3 @@ function MainTabScreen(){
     );
 }
 
-export default function Routes(){
-    return(
-        <Stack.Navigator screenOptions={{headerShown: false}}>
-            <Stack.Screen name="MainTab" component={MainTabScreen}/>
-        </Stack.Navigator>
-    );
-}
